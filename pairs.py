@@ -1,15 +1,9 @@
-def get_pairs(arr: [int], sum: int):
-    # Store counts of all elements
-    # in a dictionary
+def get_pairs(arr: [int], target_sum: int):
     mydict = dict()
-
     result = []
-    # Traverse through all the elements
-    for i in range(len(arr)):
 
-        # Search if a pair can be
-        # formed with arr[i]
-        temp = sum - arr[i]
+    for i in range(len(arr)):
+        temp = target_sum - arr[i]
 
         if temp in mydict:
             count = mydict[temp]
